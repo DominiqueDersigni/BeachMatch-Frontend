@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 300" role="img" aria-labelledby="title desc">
+  <title id="title">Beachmatch beeldmerk en woordmerk</title>
+  <desc id="desc">Het nieuwe Beachmatch beeldmerk naast de naam beachmatch in Avenir Next Extra Bold, zonder slogan.</desc>
+  <defs>
+    <clipPath id="beachmatchRoundel"><circle cx="136" cy="105" r="59"/></clipPath>
+  </defs>
+  <g transform="translate(0 3)">
+    <path d="M136 18c-55 0-100 45-100 100 0 67 100 136 100 136s100-69 100-136c0-55-45-100-100-100z" fill="#F46F55"/>
+    <circle cx="136" cy="105" r="59" fill="#FFF9EF"/>
+    <g clip-path="url(#beachmatchRoundel)">
+      <circle cx="136" cy="84" r="18" fill="#FFB84D"/>
+      <g stroke="#FFB84D" stroke-width="4" stroke-linecap="round">
+        <path d="M136 53v10M136 105v10M101 84h10M161 84h10M111 59l8 8M153 101l8 8M161 59l-8 8M119 101l-8 8"/>
+      </g>
+      <path d="M72 132c18-12 36-12 54 0s36 12 54 0 36-12 54 0v38H72z" fill="#0B9F9B"/>
+      <path d="M72 153c18-11 36-11 54 0s36 11 54 0 36-11 54 0v17H72z" fill="#087F91"/>
+      <path d="M68 143c22-15 44-15 66 0s44 15 66 0 44-15 66 0" fill="none" stroke="#DDF8F1" stroke-width="7" stroke-linecap="round"/>
+      <path d="M74 164c18-10 36-10 54 0s36 10 54 0 36-10 54 0" fill="none" stroke="#63A8AE" stroke-width="6" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g font-family="Avenir Next, sans-serif" font-weight="800" letter-spacing="0">
+    <text x="310" y="177" font-size="91" fill="#123C4A">beach</text>
+    <text x="602" y="177" font-size="91" fill="#0B9F9B">match</text>
+  </g>
+</svg>

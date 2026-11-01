@@ -13,9 +13,12 @@ function Navigation() {
                 <li><NavLink to="/beaches">beaches</NavLink></li>
                 <li><NavLink to="/todaysmatch">today's match</NavLink></li>
             </ul>
-            <NavLink className = "navigation-profile" to="/profile">
-                Profile
-            </NavLink>
+            <div className="navigation-right">
+                <NavLink className = "navigation-profile" to="/profile">
+                    Profile
+                </NavLink>
+            </div>
+
         </nav>
     )
 }

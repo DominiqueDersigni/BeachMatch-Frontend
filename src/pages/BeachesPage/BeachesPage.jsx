@@ -6,7 +6,7 @@ function BeachesPage() {
         <>
             <h1>Beaches</h1>
 
-            <p>Back to the<Link to="/">Homepage</Link></p>
+            <p>Back to the <Link to="/">Homepage</Link></p>
         </>
     );
 }

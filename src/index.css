@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Avenir Next", "Nunito Sans", sans-serif;
+
+        --dark-sea-green: #183F49;
+        --sea-blue: #087F91;
+        --turquoise: #0B9F9B;
+        --green-grey: #61777A;
+        --light-grey: #E1E8E3;
+        --coral: #F46F55;
+        --sun-yellow: #FFB84D;
+        --cream: #FFF9EF;
+        --white: #FFFFFF;
+    }
+
+body{
+    margin: 0;
+    background-color: var(--cream);
+    color: var(--dark-sea-green);
+}
+

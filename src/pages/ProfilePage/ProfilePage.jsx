@@ -9,7 +9,7 @@ function ProfilePage() {
     return (
         <>
             <h1>Profile</h1>
-            {user && <p>Welcome, {user.username}</p>}
+            {user && <p>Welcome, {user.firstName}</p>}
             <p>Back to the<Link to="/">Homepage</Link></p>
         </>
     );

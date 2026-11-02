@@ -24,7 +24,7 @@ function Navigation() {
                     location.pathname === "/profile"? (
                             <button className="navigation-profile" onClick={logout}>Log out</button>
                         ) : (
-                        <NavLink className = "navigation-profile" to="/profile">{user.username}</NavLink>
+                        <NavLink className = "navigation-profile" to="/profile">{user.firstName}</NavLink>
                     )
                     ) : (
                     <NavLink className = "navigation-profile" to="/login">Log in</NavLink>

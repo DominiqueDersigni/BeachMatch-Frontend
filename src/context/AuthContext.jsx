@@ -25,6 +25,7 @@ export function AuthProvider({children}) {
                     isAuth: true,
                     user: {
                         username: decodedToken.preferred_username,
+                        firstName: decodedToken.given_name,
                         email: decodedToken.email,
                         roles: decodedToken.resource_access.BeachMatchBackend.roles,
                     },
@@ -53,6 +54,7 @@ export function AuthProvider({children}) {
             isAuth: true,
             user: {
                 username: decodedToken.preferred_username,
+                firstName: decodedToken.given_name,
                 email: decodedToken.email,
                 roles: decodedToken.resource_access.BeachMatchBackend.roles,
             },

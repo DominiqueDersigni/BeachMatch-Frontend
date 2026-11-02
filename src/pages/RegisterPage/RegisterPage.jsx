@@ -25,7 +25,7 @@ function RegisterPage() {
                 </label>
                 <button>Registreren</button>
             </form>
-            <p>Heb je al een account? Je kunt je <Link to="/signin">hier</Link> inloggen.</p>
+            <p>Already have an account? <Link to="/login">Log in</Link>.</p>
         </>
     );
 }

@@ -3,7 +3,7 @@ import React, {useContext, useState} from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import axios from 'axios';
 
-function SignInPage() {
+function LogInPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const {login} = useContext(AuthContext);
@@ -61,4 +61,4 @@ function SignInPage() {
     );
 }
 
-export default SignInPage;
+export default LogInPage;

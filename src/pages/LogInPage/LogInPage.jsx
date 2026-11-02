@@ -56,7 +56,7 @@ function LogInPage() {
                 <button type = "submit">Log in</button>
             </form>
 
-            <p>Don't have an account yet? <Link to="/register">Register</Link></p>
+            <p>Don't have an account yet? </p> <a href = "http://localhost:9090/realms/BeachMatch/protocol/openid-connect/registrations?client_id=BeachMatchFrontend&response_type=code&redirect_uri=http://localhost:5173/login">Register</a>
         </>
     );
 }

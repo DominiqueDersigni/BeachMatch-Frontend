@@ -14,27 +14,36 @@ export function AuthProvider({children}) {
     const navigate = useNavigate();
 
 
-
     useEffect(() => {
         const token = localStorage.getItem('token');
+
         if (token) {
             const decodedToken = jwtDecode(token);
-            setAuthState({
-                isAuth: true,
-                user: {
-                    username: decodedToken.preferred_username,
-                    email: decodedToken.email,
-                    roles: decodedToken.resource_access.BeachMatchBackend.roles,
-                },
-                status: 'done',
-            });
-            console.log("User is still logged in!")
-        }
-            else {
+
+            if (decodedToken.exp * 1000 > Date.now()) {
+                setAuthState({
+                    isAuth: true,
+                    user: {
+                        username: decodedToken.preferred_username,
+                        email: decodedToken.email,
+                        roles: decodedToken.resource_access.BeachMatchBackend.roles,
+                    },
+                    status: 'done',
+                });
+                console.log("User is still logged in!")
+            } else {
+                localStorage.removeItem('token');
+                setAuthState({
+                    isAuth: false,
+                    user: null,
+                    status: 'done',
+                });
+            }
+            } else {
             setAuthState({ ...authState, status: 'done' });
             }
-
     }, []);
+
 
     async function login(token) {
         localStorage.setItem('token', token);

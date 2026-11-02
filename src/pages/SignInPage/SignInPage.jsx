@@ -1,33 +1,62 @@
-import { Link } from 'react-router-dom';
-import React, {useContext} from 'react';
+import {Link} from 'react-router-dom';
+import React, {useContext, useState} from 'react';
 import { AuthContext } from '../../context/AuthContext';
+import axios from 'axios';
 
 function SignInPage() {
-    const { login } = useContext(AuthContext);
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const {login} = useContext(AuthContext);
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
-        login();
+
+        const body = new URLSearchParams({
+            grant_type: 'password',
+            client_id: 'BeachMatchFrontend',
+            username: username,
+            password: password,
+        });
+
+        try {
+            const response = await axios.post(
+                'http://localhost:9090/realms/BeachMatch/protocol/openid-connect/token', body,
+                { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } });
+            login(response.data.access_token);
+            console.log(response.data);
+
+        }
+        catch (error) {
+            console.log("Wrong username or password");
+        }
     }
 
     return (
         <>
-            <h1>Inloggen</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias cum debitis dolor dolore fuga id molestias qui quo unde?</p>
-
+            <h1>Log in</h1>
             <form onSubmit={handleSubmit}>
-                <label>
-                    e-mail adres
-                    <input type="email" id="emailadres" name="emailadres" />
+                <label htmlFor="username">
+                    Username:
+                    <input
+                        type="text"
+                        name="username-field"
+                        id="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}/>
                 </label>
-                <label>
-                    wachtwoord
-                    <input type="password" id="wachtwoord" name="wachtwoord"/>
+                <label htmlFor="password">
+                    Password:
+                    <input
+                        type="password"
+                        name="password-field"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}/>
                 </label>
-                <button>Inloggen</button>
+                <button type = "submit">Log in</button>
             </form>
 
-            <p>Heb je nog geen account? <Link to="/signup">Registreer</Link> je dan eerst.</p>
+            <p>Don't have an account yet? <Link to="/register">Register</Link></p>
         </>
     );
 }

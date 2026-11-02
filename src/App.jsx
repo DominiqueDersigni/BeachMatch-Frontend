@@ -10,6 +10,7 @@ import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import {use} from "react";
 import Navigation from "./Navigation.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
     const location = useLocation();
@@ -29,6 +30,7 @@ function App() {
             <Route path="*" element={<ErrorPage/>}/>
           </Routes>
         </main>
+          <Footer />
       </>
   );
 }

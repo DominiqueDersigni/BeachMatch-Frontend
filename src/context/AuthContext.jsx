@@ -1,6 +1,7 @@
 import {createContext, useEffect, useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {jwtDecode} from "jwt-decode";
+import axios from "axios";
 
 export const AuthContext = createContext({});
 
@@ -35,7 +36,7 @@ export function AuthProvider({children}) {
 
     }, []);
 
-    function login(token) {
+    async function login(token) {
         localStorage.setItem('token', token);
         const decodedToken = jwtDecode(token);
 
@@ -48,6 +49,14 @@ export function AuthProvider({children}) {
             },
             status: 'done',
         });
+
+        try{
+            const response = await axios.post(`http://localhost:8080/users/${decodedToken.preferred_username}`,
+                {}, { headers: { Authorization: `Bearer ${token}` } });
+            console.log(response.data);
+        } catch (error) {
+            console.log(error);
+        }
         console.log("User is logged in!")
         navigate('/profile')
     }

@@ -1,7 +1,5 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import Navigation from './Navigation.jsx';
-import logo from './assets/logo.svg';
+import {Routes, Route, useLocation} from 'react-router-dom';
 import HomePage from './pages/HomePage/HomePage.jsx';
 import BeachesPage from './pages/BeachesPage/BeachesPage.jsx';
 import BeachDetailPage from './pages/BeachDetailPage/BeachDetailPage.jsx';
@@ -11,14 +9,15 @@ import RegisterPage from './pages/RegisterPage/RegisterPage.jsx';
 import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
 import {use} from "react";
+import Navigation from "./Navigation.jsx";
+import Footer from "./Footer.jsx";
 
 function App() {
-  return (
+    const location = useLocation();
+
+    return (
       <>
-        <header className="header">
-          <img src={logo} alt="BeachMatch logo"/>
-          <Navigation/>
-        </header>
+          {location.pathname !== "/register" && location.pathname !== "/signin" && <Navigation />}
         <main>
           <Routes>
             <Route path="/" element={<HomePage/>}/>
@@ -31,6 +30,7 @@ function App() {
             <Route path="*" element={<ErrorPage/>}/>
           </Routes>
         </main>
+          <Footer />
       </>
   );
 }

@@ -13,8 +13,26 @@ export function AuthProvider({children}) {
     const navigate = useNavigate();
 
 
+
     useEffect(() => {
-        setAuthState({ ...authState, status: 'done' });
+        const token = localStorage.getItem('token');
+        if (token) {
+            const decodedToken = jwtDecode(token);
+            setAuthState({
+                isAuth: true,
+                user: {
+                    username: decodedToken.preferred_username,
+                    email: decodedToken.email,
+                    roles: decodedToken.resource_access.BeachMatchBackend.roles,
+                },
+                status: 'done',
+            });
+            console.log("User is still logged in!")
+        }
+            else {
+            setAuthState({ ...authState, status: 'done' });
+            }
+
     }, []);
 
     function login(token) {
@@ -30,7 +48,7 @@ export function AuthProvider({children}) {
             },
             status: 'done',
         });
-        console.log("Gebruiker is ingelogd!")
+        console.log("User is logged in!")
         navigate('/profile')
     }
 
@@ -42,7 +60,7 @@ export function AuthProvider({children}) {
             user: null,
             status: 'done',
         });
-        console.log("Gebruiker is uitgelogd!")
+        console.log("User is logged out!")
         navigate('/')
     }
 

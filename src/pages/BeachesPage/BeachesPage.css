@@ -1,0 +1,20 @@
+.beaches-page {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 40px
+}
+
+.beaches-list-section {
+    flex: 1;
+}
+
+.beaches-map-section {
+    flex: 1;
+    padding: 85px 20px;
+}
+
+.beaches-map-section img {
+    max-width: 100%;
+    border-radius: 16px;
+}

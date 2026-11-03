@@ -1,0 +1,38 @@
+.beach-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+    gap: 16px;
+}
+
+.beach-card {
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 8px 32px;
+}
+
+.beach-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+h3 {
+    color: var(--dark-sea-green);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.beach-card-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: var(--green-grey);
+    font-size: 0.95rem;
+}
+
+.rating {
+    color: var(--sun-yellow);
+    font-size: 1rem;
+    font-weight: 600;
+}

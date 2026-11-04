@@ -6,6 +6,7 @@ import axios from "axios";
 import './BeachDetailPage.css';
 import InfoCard from '../../components/InfoCard/InfoCard.jsx';
 import featureIcon from "../../assets/featureIcon.svg";
+import ReviewCard from "../../components/ReviewCard/ReviewCard.jsx";
 
 function BeachDetailPage() {
     const {id} = useParams();
@@ -41,7 +42,18 @@ function BeachDetailPage() {
                 {beach && <InfoCard title="Features" icon={featureIcon} informationText={beach.beachFeatures.map((feature) => feature.name).join(', ')} />}
             </section>
             <section className="beach-reviews">
-
+                <div className="beach-reviews-list">
+                    {beach && beach.review.map((review) => (
+                        <ReviewCard
+                            key={review.id}
+                            userName={review.userName}
+                            createDate={review.createDate}
+                            title={review.title}
+                            text={review.text}
+                            score={review.score}
+                        />
+                    ))}
+                </div>
             </section>
         </>
     );

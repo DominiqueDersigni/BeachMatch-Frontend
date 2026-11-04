@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1200" role="img" aria-label="Lange abstracte kustkaart in Beachmatch-kleuren">
+  <rect width="720" height="1200" fill="#D9F0ED"/>
+  <path d="M0 0H379C346 103 413 192 361 296C310 397 389 485 341 590C291 702 372 797 327 900C281 1008 355 1095 314 1200H0Z" fill="#E9EBDD"/>
+  <path d="M0 0H275C248 105 301 187 255 292C209 397 279 482 236 588C192 699 263 793 224 899C186 1008 252 1098 213 1200H0Z" fill="#D6E3D1"/>
+  <path d="M379 0C346 103 413 192 361 296C310 397 389 485 341 590C291 702 372 797 327 900C281 1008 355 1095 314 1200" fill="none" stroke="#F4D397" stroke-width="17"/>
+  <path d="M387 0C354 103 421 192 369 296C318 397 397 485 349 590C299 702 380 797 335 900C289 1008 363 1095 322 1200" fill="none" stroke="#FFF9EF" stroke-width="5" opacity=".9"/>
+  <path d="M520 0C473 125 548 211 503 332S565 542 514 655s11 207-14 294M642 0c-46 109 23 184-19 284s30 204-15 307 9 209-9 309" fill="none" stroke="#FFF9EF" stroke-width="7" opacity=".72"/>
+  <path d="M60 167c105 42 154-8 238 21M45 513c90-42 164 17 245-9M40 917c105-41 166 18 257-10" fill="none" stroke="#C4D4C0" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  <g transform="translate(350 205)"><path d="M0 0c-27 0-48 21-48 47 0 35 48 82 48 82s48-47 48-82C48 21 27 0 0 0Z" fill="#F46F55"/><circle cy="46" r="17" fill="#FFF9EF"/><circle cy="42" r="7" fill="#FFB84D"/></g>
+  <g transform="translate(331 532)"><path d="M0 0c-24 0-42 18-42 42 0 31 42 72 42 72s42-41 42-72C42 18 24 0 0 0Z" fill="#0B9F9B"/><circle cy="41" r="14" fill="#FFF9EF"/></g>
+  <g transform="translate(323 855)"><path d="M0 0c-22 0-39 17-39 39 0 29 39 67 39 67s39-38 39-67C39 17 22 0 0 0Z" fill="#087F91"/><circle cy="38" r="13" fill="#FFF9EF"/></g>
+  <g transform="translate(310 1080)"><path d="M0 0c-20 0-35 15-35 35 0 26 35 60 35 60s35-34 35-60C35 15 20 0 0 0Z" fill="#F46F55"/><circle cy="34" r="12" fill="#FFF9EF"/></g>
+</svg>

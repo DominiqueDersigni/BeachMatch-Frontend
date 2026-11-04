@@ -1,0 +1,11 @@
+.search-bar {
+    width: 100%;
+    padding: 12px 24px;
+    border: 1px solid var(--dark-sea-green);
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 32px;
+    color: var(--dark-sea-green);
+   }

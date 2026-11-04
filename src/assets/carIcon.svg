@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Auto-icoon in Beachmatch-stijl">
+  <path d="M35 137c6-12 20-18 43-23l27-35c9-12 20-17 36-17h55c18 0 29 9 38 24l19 31 25 6c12 3 19 12 19 25v13H24v-12c0-6 4-10 11-12Z" fill="#0B9F9B"/>
+  <path d="m88 108 25-33c6-8 14-12 26-12h25v47H88Zm85-45h23c13 0 21 6 28 17l16 28h-67V63Z" fill="#FFF9EF"/>
+  <path d="M164 64v46" stroke="#D9EEF1" stroke-width="6"/>
+  <path d="M32 139h13m229 0h14" stroke="#FFB84D" stroke-width="9" stroke-linecap="round"/>
+  <path d="M26 151h268" stroke="#087F91" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="82" cy="151" r="24" fill="#183F49"/><circle cx="82" cy="151" r="10" fill="#FFF9EF"/>
+  <circle cx="238" cy="151" r="24" fill="#183F49"/><circle cx="238" cy="151" r="10" fill="#FFF9EF"/>
+</svg>

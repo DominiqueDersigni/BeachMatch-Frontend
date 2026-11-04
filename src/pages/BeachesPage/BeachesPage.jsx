@@ -15,7 +15,7 @@ function BeachesPage() {
         <>
             <div className="beaches-page">
                 <section className="beaches-list-section">
-                    <h1>Find your beach</h1>
+                    <h2>Find your beach</h2>
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
                     <SearchBar value={searchTerm} onSearch={setSearchTerm} />

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Zonnetje met stralen in Beachmatch-stijl">
+  <g stroke="#FFB84D" stroke-width="12" stroke-linecap="round">
+    <path d="M128 18v28M128 210v28M18 128h28M210 128h28M50.2 50.2l19.8 19.8M186 186l19.8 19.8M205.8 50.2 186 70M70 186l-19.8 19.8"/>
+  </g>
+  <circle cx="128" cy="128" r="56" fill="#FFB84D"/>
+</svg>

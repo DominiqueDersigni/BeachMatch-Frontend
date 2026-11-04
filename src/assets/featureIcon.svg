@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Beachfeatures-icoon met parasol en golven">
+  <path d="M38 121c7-51 45-85 90-85s83 34 90 85c-17-9-34-9-51 0-18-9-35-9-52 0-18-9-35-9-52 0-9-5-17-5-25-1Z" fill="#F46F55"/>
+  <path d="M128 38v79M77 51l30 66M179 51l-30 66" fill="none" stroke="#FFF9EF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M128 116v82c0 15-10 22-23 17" fill="none" stroke="#183F49" stroke-width="9" stroke-linecap="round"/>
+  <path d="M30 174c20-14 40-14 60 0s40 14 60 0 40-14 60 0 32 11 42 5" fill="none" stroke="#0B9F9B" stroke-width="12" stroke-linecap="round"/>
+  <path d="M38 205c18-12 36-12 54 0s36 12 54 0 36-12 54 0 34 11 48 3" fill="none" stroke="#087F91" stroke-width="10" stroke-linecap="round"/>
+</svg>

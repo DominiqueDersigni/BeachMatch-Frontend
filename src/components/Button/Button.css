@@ -1,0 +1,10 @@
+.multi-use-button {
+    text-decoration: none;
+    background-color: var(--coral);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 8px 24px;
+    border-radius: 999px;
+    border: none;
+}

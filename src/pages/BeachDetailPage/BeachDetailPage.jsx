@@ -11,6 +11,8 @@ function BeachDetailPage() {
             {beach && <h1>{beach.name}</h1>}
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
+
+            <img src={`http://localhost:8080/beaches/${id}/photo`} alt="Beach photo" />
         </>
     );
 }

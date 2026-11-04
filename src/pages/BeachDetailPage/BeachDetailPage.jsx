@@ -1,12 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams} from 'react-router-dom';
+import useBeach from '../../hooks/useBeach/useBeach.jsx';
 
 function BeachDetailPage() {
+    const {id} = useParams();
+    const { beach, loading, error } = useBeach(id);
+
     return (
         <>
-            <h1>Beach</h1>
-
-            <p>Back to the<Link to="/">Homepage</Link></p>
+            {beach && <h1>{beach.name}</h1>}
+            {loading && <p>Loading...</p>}
+            {error && <p>{error}</p>}
         </>
     );
 }

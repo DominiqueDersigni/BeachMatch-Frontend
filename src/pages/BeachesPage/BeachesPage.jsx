@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useBeaches from '../../hooks/useBeaches/useBeaches.jsx';
 import BeachCard from '../../components/BeachCard/BeachCard.jsx';
 import map from "../../assets/map.svg";
+import SearchBar from '../../components/SearchBar/SearchBar.jsx';
 import './BeachesPage.css';
 
 function BeachesPage() {
     const {beaches, loading, error} = useBeaches();
+    const [searchTerm, setSearchTerm] = useState('');
+    const filteredBeaches = beaches.filter((beach) => beach.name.toLowerCase().includes(searchTerm.toLowerCase()) || beach.province.toLowerCase().includes(searchTerm.toLowerCase()));
 
     return (
         <>
@@ -15,8 +18,9 @@ function BeachesPage() {
                     <h1>Find your beach</h1>
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
+                    <SearchBar value={searchTerm} onSearch={setSearchTerm} />
                     <div className="beach-list">
-                    {beaches.map((beach) => (
+                    {filteredBeaches.map((beach) => (
                         <BeachCard
                             key={beach.id}
                             id={beach.id}

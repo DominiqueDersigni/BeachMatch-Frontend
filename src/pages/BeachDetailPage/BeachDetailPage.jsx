@@ -2,7 +2,7 @@ import './BeachDetailPage.css';
 import axios from "axios";
 import React, { useState } from 'react';
 import { Link, useParams} from 'react-router-dom';
-import useBeach from '../../hooks/useBeach/useBeach.jsx';
+import useBeach from '../../hooks/useBeach/useBeach.js';
 import Button from '../../components/Button/Button.jsx';
 import ReviewCard from "../../components/ReviewCard/ReviewCard.jsx";
 import InfoCard from '../../components/InfoCard/InfoCard.jsx';

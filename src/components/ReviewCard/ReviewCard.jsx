@@ -1,6 +1,6 @@
 import './ReviewCard.css';
 import profileIcon from "../../assets/profileIcon.svg";
-import formatDate from "../../helpers/formatDate.jsx";
+import formatDate from "../../helpers/formatDate.js";
 
 function ReviewCard({userName, createDate, title, text, score}) {
     return (

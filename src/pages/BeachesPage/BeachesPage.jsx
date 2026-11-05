@@ -1,7 +1,7 @@
 import './BeachesPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useBeaches from '../../hooks/useBeaches/useBeaches.jsx';
+import useBeaches from '../../hooks/useBeaches/useBeaches.js';
 import BeachCard from '../../components/BeachCard/BeachCard.jsx';
 import SearchBar from '../../components/SearchBar/SearchBar.jsx';
 import map from "../../assets/map.svg";
@@ -36,7 +36,6 @@ function BeachesPage() {
                     <img src={map} alt="Map with pinned beaches"/>
                 </section>
             </div>
-            <p>Back to the <Link to="/">Homepage</Link></p>
         </>
     );
 }

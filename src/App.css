@@ -1,3 +1,9 @@
+main {
+    max-width: 1100px;
+    padding: 24px 24px 24px 24px;
+    margin: 0 auto;
+}
+
 .navigation-bar{
     display: flex;
     flex-direction: row;

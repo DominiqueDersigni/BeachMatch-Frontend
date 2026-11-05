@@ -1,10 +1,10 @@
+import './BeachesPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useBeaches from '../../hooks/useBeaches/useBeaches.jsx';
 import BeachCard from '../../components/BeachCard/BeachCard.jsx';
-import map from "../../assets/map.svg";
 import SearchBar from '../../components/SearchBar/SearchBar.jsx';
-import './BeachesPage.css';
+import map from "../../assets/map.svg";
 
 function BeachesPage() {
     const {beaches, loading, error} = useBeaches();
@@ -15,7 +15,7 @@ function BeachesPage() {
         <>
             <div className="beaches-page">
                 <section className="beaches-list-section">
-                    <h2>Find your beach</h2>
+                    <h1>Find your beach</h1>
                     {loading && <p>Loading...</p>}
                     {error && <p>{error}</p>}
                     <SearchBar value={searchTerm} onSearch={setSearchTerm} />

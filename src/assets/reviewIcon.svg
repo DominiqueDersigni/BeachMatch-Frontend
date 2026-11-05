@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Review-icoon als tekstballon">
+  <path d="M43 35h170c14 0 25 11 25 25v104c0 14-11 25-25 25h-98l-57 39v-39H43c-14 0-25-11-25-25V60c0-14 11-25 25-25Z" fill="#EAF4EF" stroke="#087F91" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M67 93h122M67 123h88M67 153h106" fill="none" stroke="#0B9F9B" stroke-width="10" stroke-linecap="round"/>
+  <path d="M67 93h47" fill="none" stroke="#F46F55" stroke-width="10" stroke-linecap="round"/>
+</svg>

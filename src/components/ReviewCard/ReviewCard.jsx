@@ -1,5 +1,6 @@
 import './ReviewCard.css';
 import profileIcon from "../../assets/profileIcon.svg";
+import formatDate from "../../helpers/formatDate.jsx";
 
 function ReviewCard({userName, createDate, title, text, score}) {
     return (
@@ -8,13 +9,15 @@ function ReviewCard({userName, createDate, title, text, score}) {
                 <div className="review-card-icon-author">
                     <img src={profileIcon} alt=""/>
                     <div className="review-card-userName-date">
-                        <p>{userName}</p>
-                        <p className= "date">{createDate}</p>
+                        <div className="review-card-userName-date">
+                            <p className="review-card-author">{userName}</p>
+                            <p className= "date">{formatDate(createDate)}</p>
+                        </div>
                     </div>
                 </div>
                 <p className ="rating">{score}/5</p>
             </div>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
             <p>{text}</p>
         </article>
     )

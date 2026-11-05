@@ -2,7 +2,7 @@
     background-color: var(--white);
     border: 1px solid var(--sea-blue);
     border-radius: 16px;
-    padding: 8px 32px
+    padding: 24px 32px;
 }
 
 .review-card-header{
@@ -17,7 +17,7 @@
 }
 
 .review-card img{
-    width: 40px;
+    width: 50px;
 }
 
 .rating{
@@ -29,4 +29,13 @@
 .date{
     color: var(--green-grey);
     font-size: 0.9rem;
+}
+
+.review-card-author {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.review-card-userName-date p {
+    margin: 0;
 }

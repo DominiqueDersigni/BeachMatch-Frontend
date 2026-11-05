@@ -1,10 +1,3 @@
-.beach-list {
-    display: flex;
-    flex-direction: column;
-    max-width: 720px;
-    gap: 16px;
-}
-
 .beach-card {
     background-color: var(--white);
     border: 1px solid var(--sea-blue);
@@ -15,12 +8,6 @@
 .beach-card a{
     text-decoration: none;
     color: inherit;
-}
-
-h3 {
-    color: var(--dark-sea-green);
-    font-size: 1.5rem;
-    font-weight: 600;
 }
 
 .beach-card-info{

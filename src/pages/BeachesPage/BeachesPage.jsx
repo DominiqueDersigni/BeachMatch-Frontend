@@ -1,10 +1,10 @@
+import './BeachesPage.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useBeaches from '../../hooks/useBeaches/useBeaches.jsx';
 import BeachCard from '../../components/BeachCard/BeachCard.jsx';
-import map from "../../assets/map.svg";
 import SearchBar from '../../components/SearchBar/SearchBar.jsx';
-import './BeachesPage.css';
+import map from "../../assets/map.svg";
 
 function BeachesPage() {
     const {beaches, loading, error} = useBeaches();

@@ -1,0 +1,41 @@
+.review-card{
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 24px 32px;
+}
+
+.review-card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.review-card-icon-author{
+    display: flex;
+    gap: 10px;
+}
+
+.review-card img{
+    width: 50px;
+}
+
+.rating{
+    color: var(--sun-yellow);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.date{
+    color: var(--green-grey);
+    font-size: 0.9rem;
+}
+
+.review-card-author {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.review-card-userName-date p {
+    margin: 0;
+}

@@ -1,0 +1,16 @@
+.info-card {
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 8px 32px
+}
+
+.info-card img{
+    width: 50px;
+}
+
+.info-card-header{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}

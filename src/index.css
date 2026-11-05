@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -24,3 +24,26 @@ body{
     color: var(--dark-sea-green);
 }
 
+h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 1.625rem;
+    font-weight: 700;
+}
+
+button, input {
+    font-family: inherit;
+}

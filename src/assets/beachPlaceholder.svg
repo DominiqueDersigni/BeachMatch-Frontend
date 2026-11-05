@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="488.1" viewBox="0 0 1316 584" role="img" aria-label="Strandillustratie met zon, zand en golven">
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="414.4" viewBox="0 0 1316 389.33" role="img" aria-label="Lage strandillustratie met zon, zand en golven">
   <defs>
     <clipPath id="roundedBeach">
-      <rect width="1316" height="584" rx="30"/>
+      <rect width="1316" height="389.33" rx="30"/>
     </clipPath>
   </defs>
   <g clip-path="url(#roundedBeach)">
-    <rect width="1316" height="584" fill="#D9EEF1"/>
-    <circle cx="1108" cy="148" r="88" fill="#FFB84D"/>
-    <path d="M0 300H1316V367C1126 391 1013 343 842 347C648 352 533 401 337 374C193 354 92 342 0 361Z" fill="#F4D397"/>
-    <path d="M0 361C143 334 209 360 347 380C525 405 649 364 823 352C1023 339 1115 389 1316 361V584H0Z" fill="#0B9F9B"/>
-    <path d="M0 422C145 395 214 420 350 438C527 462 651 422 823 412C1021 400 1120 446 1316 419" fill="none" stroke="#DDF8F1" stroke-width="16" stroke-linecap="round"/>
-    <path d="M0 490H1316V584H0Z" fill="#087F91"/>
+    <rect width="1316" height="389.33" fill="#D9EEF1"/>
+    <circle cx="1108" cy="87" r="58" fill="#FFB84D"/>
+    <path d="M0 197H1316V233C1126 249 1013 216 842 220C648 226 533 256 337 235C193 220 92 216 0 232Z" fill="#F4D397"/>
+    <path d="M0 232C143 215 209 230 347 244C525 261 649 230 823 220C1023 209 1115 247 1316 228V389.33H0Z" fill="#0B9F9B"/>
+    <path d="M0 282C145 264 214 281 350 294C527 310 651 280 823 271C1021 261 1120 299 1316 278" fill="none" stroke="#DDF8F1" stroke-width="13" stroke-linecap="round"/>
+    <path d="M0 325H1316V389.33H0Z" fill="#087F91"/>
   </g>
 </svg>

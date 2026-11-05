@@ -9,10 +9,8 @@ function ReviewCard({userName, createDate, title, text, score}) {
                 <div className="review-card-icon-author">
                     <img src={profileIcon} alt=""/>
                     <div className="review-card-userName-date">
-                        <div className="review-card-userName-date">
-                            <p className="review-card-author">{userName}</p>
-                            <p className= "date">{formatDate(createDate)}</p>
-                        </div>
+                        <p className="review-card-author">{userName}</p>
+                        <p className= "date">{formatDate(createDate)}</p>
                     </div>
                 </div>
                 <p className ="rating">{score}/5</p>

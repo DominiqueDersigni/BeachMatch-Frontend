@@ -1,4 +1,7 @@
 .beach-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--white);
     border: 1px solid var(--sea-blue);
     border-radius: 16px;
@@ -22,4 +25,13 @@
     color: var(--sun-yellow);
     font-size: 1rem;
     font-weight: 600;
+}
+
+.favorite-button img{
+    width: 40px;
+}
+
+.favorite-button{
+    background-color: transparent;
+    border: none;
 }

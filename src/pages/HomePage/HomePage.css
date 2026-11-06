@@ -2,10 +2,6 @@
     font-size: 3rem;
 }
 
-.title-highlight {
-    color: var(--sea-blue);
-}
-
 .upper-part-homepage{
     display: flex;
     align-items: center;

@@ -14,3 +14,9 @@
     align-items: center;
     gap: 16px;
 }
+
+.info-card p{
+    color: var(--sun-yellow);
+    font-size: 1.5rem;
+    font-weight: 600;
+}

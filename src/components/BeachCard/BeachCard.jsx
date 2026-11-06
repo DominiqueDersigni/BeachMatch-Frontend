@@ -2,8 +2,12 @@ import {Link} from 'react-router-dom';
 import './BeachCard.css';
 import heartFull from "../../assets/heartFull.svg";
 import heartEmpty from "../../assets/heartEmpty.svg";
+import { AuthContext } from '../../context/AuthContext.jsx';
+import { useContext } from 'react';
 
 function BeachCard({id, name, province, beachFeatures, rating, isFavorite, onToggleFavorite}) {
+    const { isAuth } = useContext(AuthContext);
+
     return (
         <article className="beach-card">
            <div className="beach-card-content">
@@ -15,9 +19,9 @@ function BeachCard({id, name, province, beachFeatures, rating, isFavorite, onTog
                 </div>
                 {rating ? <p className="rating">{rating.toFixed(1)}/5</p> : <p>No reviews yet</p>}
            </div>
-            <button className="favorite-button" type="button" onClick={() => onToggleFavorite(id)}>
+            {isAuth && <button className="favorite-button" type="button" onClick={() => onToggleFavorite(id)}>
                 <img src={isFavorite ? heartFull : heartEmpty} alt="Favorite icon"/>
-            </button>
+            </button>}
         </article>
     );
 }

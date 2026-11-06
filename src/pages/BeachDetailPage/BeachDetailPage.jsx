@@ -40,7 +40,7 @@ function BeachDetailPage() {
             {error && <p>{error}</p>}
             <div className="beach-photo-download-button">
                 <img onError={() => setPhotoError (true)} src={photoError ? beachPlaceholder : `http://localhost:8080/beaches/${id}/photo`} alt="Beach photo" />
-                <Button onClick={handleDownload}>Download picture</Button>
+                <Button variant="secondary" onClick={handleDownload}>Download picture</Button>
             </div>
             <section className="beach-info">
                 {beach && <InfoCard title="Weather" icon={sunIcon} informationText={"coming soon"} />}

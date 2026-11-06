@@ -1,0 +1,42 @@
+.title{
+    font-size: 3rem;
+}
+
+.title-highlight {
+    color: var(--sea-blue);
+}
+
+.upper-part-homepage{
+    display: flex;
+    align-items: center;
+    gap:48px;
+}
+
+.upper-part-homepage img{
+    width: 50%;
+}
+
+.homepage-upper-left{
+    flex:1;
+}
+
+.how-it-works-title{
+    text-align: center;
+}
+
+.how-it-works-cards{
+    display: flex;
+    gap: 16px;
+}
+
+.how-it-works-cards article{
+    flex:1;
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 8px 32px;
+}
+
+.how-it-works-cards p{
+    color: var(--green-grey)
+}

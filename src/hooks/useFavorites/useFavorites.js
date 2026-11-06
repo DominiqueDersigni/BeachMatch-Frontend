@@ -8,6 +8,10 @@ const useFavorites  = () => {
 
     useEffect(() => {
         const token = localStorage.getItem('token');
+        if (!token) {
+            setLoading(false);
+            return;
+        }
 
         async function fetchFavorites() {
             try {

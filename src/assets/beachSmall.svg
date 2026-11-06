@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="488.1" viewBox="0 0 1316 584" role="img" aria-label="Strandillustratie met zon, zand en golven">
+  <defs>
+    <clipPath id="roundedBeach">
+      <rect width="1316" height="584" rx="30"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#roundedBeach)">
+    <rect width="1316" height="584" fill="#D9EEF1"/>
+    <circle cx="1108" cy="148" r="88" fill="#FFB84D"/>
+    <path d="M0 300H1316V367C1126 391 1013 343 842 347C648 352 533 401 337 374C193 354 92 342 0 361Z" fill="#F4D397"/>
+    <path d="M0 361C143 334 209 360 347 380C525 405 649 364 823 352C1023 339 1115 389 1316 361V584H0Z" fill="#0B9F9B"/>
+    <path d="M0 422C145 395 214 420 350 438C527 462 651 422 823 412C1021 400 1120 446 1316 419" fill="none" stroke="#DDF8F1" stroke-width="16" stroke-linecap="round"/>
+    <path d="M0 490H1316V584H0Z" fill="#087F91"/>
+  </g>
+</svg>

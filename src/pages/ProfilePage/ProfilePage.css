@@ -1,0 +1,57 @@
+.profile-card{
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 8px 32px;
+    gap: 16px;
+    width: 100%;
+}
+
+.profile-card img{
+    width: 200px;
+}
+
+.profile-card-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--green-grey);
+}
+
+.profile-info{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.favorite-card{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 8px 32px;
+}
+
+.favorite-card img{
+    width: 50px;
+}
+
+.favorite-card h4{
+    margin: 5px;
+}
+
+.favorite-card a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.favorite-beaches-list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 50%;
+}

@@ -15,8 +15,8 @@ const useFavorites  = () => {
 
         async function fetchFavorites() {
             try {
-                const response = await axios.get(`http://localhost:8080/favorites`, { headers: { Authorization: `Bearer ${token}` } });
-                setFavorites(response.data);
+                const result = await axios.get(`http://localhost:8080/favorites`, { headers: { Authorization: `Bearer ${token}` } });
+                setFavorites(result.data);
             } catch (e) {
                 console.error(e);
                 setError('Could not load favorites');

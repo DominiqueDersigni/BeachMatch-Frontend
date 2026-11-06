@@ -1,0 +1,22 @@
+.todaysmatch-header{
+    text-align: center;
+}
+
+.todaysmatch-info{
+    display: flex;
+    gap: 16px;
+    margin: 60px 0;
+}
+
+.todaysmatch-subtitle{
+    color: var(--green-grey);
+}
+
+.todaysmatch-info .info-card{
+    flex:1;
+}
+
+.todaysmatch-button{
+    text-align: center;
+    margin-top: 32px;
+}

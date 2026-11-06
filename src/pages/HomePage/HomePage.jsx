@@ -13,7 +13,7 @@ function HomePage() {
                 </div>
                 <img src={beachSmall} alt="beach"/>
             </section>
-            <h2 className="how-it-works-title">How it works</h2>
+            <h2 className="how-it-works-title">How it works:</h2>
             <section className="how-it-works-cards">
             <article>
                 <h3>1. Create your profile</h3>

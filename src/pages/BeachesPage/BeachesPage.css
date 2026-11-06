@@ -2,26 +2,26 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    gap: 16px;
 }
 
 
 .beach-list {
     display: flex;
     flex-direction: column;
-    max-width: 720px;
     gap: 16px;
 }
 
 .beaches-list-section {
-    flex: 1;
+    flex: 3;
 }
 
 .beaches-map-section {
-    flex: 1;
-    padding: 95px 20px;
+    flex: 2;
+    padding: 95px;
 }
 
 .beaches-map-section img {
-    max-width: 500px;
+    width: 100%;
     border-radius: 16px;
 }

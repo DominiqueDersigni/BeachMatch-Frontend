@@ -9,8 +9,8 @@ const useBeaches  = () => {
     useEffect(() => {
     async function fetchBeaches() {
         try {
-            const response = await axios.get('http://localhost:8080/beaches');
-            setBeaches(response.data);
+            const result = await axios.get('http://localhost:8080/beaches');
+            setBeaches(result.data);
         } catch (e) {
             console.error(e);
             setError('Could not load beaches');

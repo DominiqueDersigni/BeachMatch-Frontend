@@ -15,8 +15,8 @@ const useUser  = (username) => {
 
         async function fetchUser() {
             try {
-                const response = await axios.get(`http://localhost:8080/users/${username}`, { headers: { Authorization: `Bearer ${token}` }});
-                setProfile(response.data);
+                const result = await axios.get(`http://localhost:8080/users/${username}`, { headers: { Authorization: `Bearer ${token}` }});
+                setProfile(result.data);
             } catch (e) {
                 console.error(e);
                 setError('Could not load user');

@@ -1,3 +1,4 @@
+import './AdminPage.css';
 import React, {useContext, useState} from "react";
 import {AuthContext} from "../../context/AuthContext.jsx";
 import BeachCard from "../../components/BeachCard/BeachCard.jsx";
@@ -77,7 +78,7 @@ function AdminPage() {
                     <h2>Beaches</h2>
                     <div className="beach-list">
                         {beaches.map((beach) => (
-                            <div key={beach.id}>
+                            <div className="admin-beach-item" key={beach.id}>
                                 <BeachCard
                                     key={beach.id}
                                     id={beach.id}
@@ -85,6 +86,7 @@ function AdminPage() {
                                     province={beach.province}
                                     beachFeatures={beach.beachFeatures}
                                     rating={beach.rating}
+                                    showRating={false}
                                 />
                                 <Button onClick={() => handleDelete(beach.id)}>Delete</Button>
                             </div>
@@ -94,22 +96,55 @@ function AdminPage() {
                     <section className="admin-add-beach-section">
                         <h2>Add a beach</h2>
                         <form onSubmit={handleSubmit}>
-                            <label htmlFor="name">Name</label>
-                            <input type="text" id="name" name="name" value={name} onChange={(e) => setName(e.target.value)} required/>
-                            <label htmlFor="province">Province</label>
-                            <input type="text" id="province" name="province" value={province} onChange={(e) => setProvince(e.target.value)} required/>
-                            <label htmlFor="latitude">Latitude</label>
-                            <input type="number" step="any" id="latitude" name="latitude" value={latitude} onChange={(e) => setLatitude(e.target.value)} required/>
-                            <label htmlFor="longitude">Longitude</label>
-                            <input type="number" step="any" id="longitude" name="longitude" value={longitude} onChange={(e) => setLongitude(e.target.value)} required/>
-                            <label htmlFor="description">Description</label>
+                            <div className="admin-form-grid">
+                                <div className="admin-form-field">
+                                    <label htmlFor="name">Name</label>
+                                    <input type="text" id="name" name="name" placeholder="e.g. Castricum aan Zee" value={name} onChange={(e) => setName(e.target.value)} required/>
+                                </div>
+                                <div className="admin-form-field">
+                                    <label htmlFor="province">Province</label>
+                                    <select id="province" name="province" value={province} onChange={(e) => setProvince(e.target.value)} required>
+                                        <option value="">e.g. Noord-Holland</option>
+                                        <option>Noord-Holland</option>
+                                        <option>Zuid-Holland</option>
+                                        <option>Zeeland</option>
+                                        <option>Friesland</option>
+                                        <option>Groningen</option>
+                                        <option>Flevoland</option>
+                                        <option>Gelderland</option>
+                                        <option>Utrecht</option>
+                                        <option>Overijssel</option>
+                                        <option>Drenthe</option>
+                                        <option>Noord-Brabant</option>
+                                        <option>Limburg</option>
+                                    </select>
+                                </div>
+                                <div className="admin-form-field">
+                                    <label htmlFor="latitude">Latitude</label>
+                                    <input type="number" step="any" id="latitude" name="latitude" placeholder="50.7 - 53.6" value={latitude} onChange={(e) => setLatitude(e.target.value)} required/>
+                                </div>
+                                <div className="admin-form-field">
+                                    <label htmlFor="longitude">Longitude</label>
+                                    <input type="number" step="any" id="longitude" name="longitude" placeholder="3.3 - 7.3" value={longitude} onChange={(e) => setLongitude(e.target.value)} required/>
+                                </div>
+                            </div>
+
+                            <div className="admin-form-field">
+                                <label htmlFor="description">Description</label>
                                 <p className="admin-form-description-hint">(max 255 characters)</p>
                                 <textarea id="description" name="description" value={description} onChange={(e) => setDescription(e.target.value)} required maxLength={255}></textarea>
-                            <label htmlFor="beach-image">
-                                Choose picture:
-                                <input type="file" name="image-field" id="beach-image" onChange={handleImageChange}/>
-                            </label>
-                            <Button type="submit">Add beach</Button>
+                            </div>
+
+                            <div className="admin-form-field">
+                                <p className="admin-form-label">Beach Photo</p>
+                                <label htmlFor="beach-image" className="admin-photo-upload">
+                                    <span className="admin-photo-title">Upload photo</span>
+                                    <span className="admin-form-description-hint">JPG or PNG, 1 photo per beach</span>
+                                    <input type="file" id="beach-image" name="image-field" accept="image/png, image/jpeg" onChange={handleImageChange}/>
+                                </label>
+                            </div>
+
+                            <Button type="submit">Save beach</Button>
                         </form>
                     </section>
                 </>

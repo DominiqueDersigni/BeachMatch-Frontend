@@ -8,6 +8,7 @@ import {useLocation} from "react-router-dom";
 function Navigation() {
 
     const { isAuth, user, logout } = useContext(AuthContext);
+    const isAdmin = user && user.roles.includes("ROLE_ADMIN");
     const location = useLocation();
 
     return (
@@ -16,6 +17,7 @@ function Navigation() {
                 <img src={logo} alt="BeachMatch logo"/>
             </NavLink>
             <ul className="navigation-middle">
+                {isAdmin && <li><NavLink to="/admin">admin panel</NavLink></li>}
                 <li><NavLink to="/beaches">beaches</NavLink></li>
                 <li><NavLink to="/todaysmatch">today's match</NavLink></li>
             </ul>

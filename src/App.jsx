@@ -7,6 +7,7 @@ import TodaysMatchPage from './pages/TodaysMatchPage/TodaysMatchPage.jsx';
 import LogInPage from './pages/LogInPage/LogInPage.jsx';
 import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
+import AdminPage from './pages/AdminPage/AdminPage.jsx';
 import Navigation from "./Navigation.jsx";
 import Footer from "./Footer.jsx";
 
@@ -24,6 +25,7 @@ function App() {
             <Route path="/beaches" element={<BeachesPage/>}/>
             <Route path="/beaches/:id" element={<BeachDetailPage/>}/>
             <Route path="/todaysmatch" element={<TodaysMatchPage/>}/>
+            <Route path="/admin" element={<AdminPage/>}/>
             <Route path="*" element={<ErrorPage/>}/>
           </Routes>
         </main>

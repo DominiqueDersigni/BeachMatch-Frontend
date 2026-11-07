@@ -9,7 +9,23 @@
 6. [Testgebruikers en rollen](#6-testgebruikers-en-rollen)
 
 ## 1. Inleiding
-BeachMatch is een webapplicatie voor het vinden van het beste strand op basis van de meest actuele weer- en verkeersinformatie. Gebruikers kunnen zoeken naar stranden in heel Nederland. Door middel van het aanduiden van favoriete stranden, kan de gebruiker een persoonlijke aanbeveling zien. De aanbeveling laat zien welk strand op dat moment het prettigst is om te bezoeken. Tevens kunnen er reviews van andere strandgangers gelezen worden en kan de gebruiker zelf ook reviews plaatsen.
+## 1. Inleiding
+Dit is de frontend van BeachMatch, een webapplicatie voor het vinden van het beste strand op basis van de meest actuele weer- en verkeersinformatie. Gebruikers kunnen zoeken naar stranden in heel Nederland. Door middel van het aanduiden van favoriete stranden, kan de gebruiker een persoonlijke aanbeveling zien. De aanbeveling laat zien welk strand op dat moment het prettigst is om te bezoeken. Tevens kunnen er reviews van andere strandgangers gelezen worden en kan de gebruiker zelf ook reviews plaatsen.
+
+De frontend is gebouwd met React en Vite. Alle gegevens worden opgehaald bij de BeachMatch-backend via een REST API. Inloggen en registreren verlopen via Keycloak. De live weer- en verkeersinformatie wordt rechtstreeks opgehaald bij Open-Meteo en TomTom.
+
+De belangrijkste functionaliteiten:
+- Inloggen, uitloggen en een account aanmaken
+- Stranden bekijken en zoeken op naam of provincie
+- De detailpagina van een strand bekijken, met kenmerken, reviews en een downloadbare foto
+- Reviews lezen en zelf een review plaatsen
+- Favoriete stranden opslaan en verwijderen
+- Today's Match: het beste strand van vandaag uit je favorieten, op basis van temperatuur, wind en verkeersdrukte
+- Het eigen profiel bekijken en aanpassen
+- Beheerpaneel (alleen voor beheerders): stranden toevoegen en verwijderen, en een strandfoto uploaden
+
+GitHub-repository: [BeachMatch-Frontend](https://github.com/DominiqueDersigni/BeachMatch-Frontend)
+De bijbehorende backend: [BeachMatch-Backend](https://github.com/DominiqueDersigni/BeachMatch-Backend)
 
 ## 2. Benodigdheden
 

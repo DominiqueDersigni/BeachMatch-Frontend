@@ -44,3 +44,71 @@
 .beach-info .info-card {
     flex: 1;
 }
+
+.write-review-section{
+    padding-top: 40px;
+}
+
+.write-review-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.review-form-title-score{
+    display: flex;
+    gap: 16px;
+}
+
+.review-form-title{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.review-form-title input, .review-form-score select, .review-form-text textarea {
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 16px;
+    padding: 8px 16px;
+    font-size: 1rem;
+}
+
+.write-review-section form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.write-review-section label{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.write-review-section textarea{
+    min-height: 120px;
+}
+
+.write-review-section button{
+    align-self: center;
+}
+
+.review-form-score{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.review-form-score select {
+    appearance: none;
+}
+
+.review-form-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form-hint{
+    font-size: 0.8rem;
+    color: var(--green-grey);
+    margin: 0;
+}

@@ -1,6 +1,5 @@
 import './BeachesPage.css';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import useBeaches from '../../hooks/useBeaches/useBeaches.js';
 import useFavorites from '../../hooks/useFavorites/useFavorites.js';

@@ -1,11 +1,14 @@
-import {Link} from 'react-router-dom';
+import './LogInPage.css';
 import React, {useContext, useState} from 'react';
 import { AuthContext } from '../../context/AuthContext.jsx';
 import axios from 'axios';
+import Button from "../../components/Button/Button.jsx";
+import logo from "../../assets/logo.svg";
 
 function LogInPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const {login} = useContext(AuthContext);
 
     async function handleSubmit(e) {
@@ -27,37 +30,37 @@ function LogInPage() {
 
         }
         catch (error) {
-            console.log("Wrong username or password");
+            setError("Wrong username or password");
         }
     }
 
     return (
-        <>
-            <h1>Log in</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="username">
-                    Username:
-                    <input
-                        type="text"
-                        name="username-field"
-                        id="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}/>
-                </label>
-                <label htmlFor="password">
-                    Password:
-                    <input
-                        type="password"
-                        name="password-field"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}/>
-                </label>
-                <button type = "submit">Log in</button>
-            </form>
+        <div className="login-page">
+            <section className="login-intro">
+                <h1>Your perfect beach is waiting.</h1>
+                <p>Log in to see today's best beach, save your favorites and share reviews.</p>
+            </section>
 
-            <p>Don't have an account yet? </p> <a href = "http://localhost:9090/realms/BeachMatch/protocol/openid-connect/registrations?client_id=BeachMatchFrontend&response_type=code&redirect_uri=http://localhost:5173/login">Register</a>
-        </>
+            <section className="login-card">
+                <img src={logo} alt="BeachMatch logo" className="login-logo"/>
+                <form onSubmit={handleSubmit}>
+                    <div className="login-form-field">
+                        <label htmlFor="username">Username</label>
+                        <input type="text" id="username" name="username-field" value={username} onChange={(e) => setUsername(e.target.value)} required/>
+                    </div>
+                    <div className="login-form-field">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" id="password" name="password-field" value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                    </div>
+                    {error && <p className="login-error">{error}</p>}
+                    <Button type="submit">Log in</Button>
+                </form>
+                <p className="login-register">
+                    Don't have an account yet?{" "}
+                    <a href="http://localhost:9090/realms/BeachMatch/protocol/openid-connect/registrations?client_id=BeachMatchFrontend&response_type=code&redirect_uri=http://localhost:5173/login">Create account</a>
+                </p>
+            </section>
+        </div>
     );
 }
 

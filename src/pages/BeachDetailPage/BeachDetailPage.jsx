@@ -37,7 +37,7 @@ function BeachDetailPage() {
     const [score, setScore] = useState("5");
     const [text, setText] = useState("");
 
-   async  function handleSubmit(e) {
+    async  function handleSubmit(e) {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try { const result = await axios.post(`http://localhost:8080/reviews`, {title: title, score: Number(score), text: text, beachId: Number(id)}, { headers: { Authorization: `Bearer ${token}` } });

@@ -1,0 +1,93 @@
+.admin-beach-item {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.admin-beach-item .beach-card {
+    flex: 1;
+}
+
+.admin-add-beach-section {
+    border-top: 1px solid var(--light-grey);
+    margin-top: 48px;
+    padding-top: 24px;
+}
+
+.admin-add-beach-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 48px;
+}
+
+.admin-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-form-field label,
+.admin-form-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.admin-add-beach-section input,
+.admin-add-beach-section select,
+.admin-add-beach-section textarea {
+    appearance: none;
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: var(--dark-sea-green);
+}
+
+.admin-add-beach-section textarea {
+    border-radius: 24px;
+    min-height: 100px;
+}
+
+.admin-form-description-hint {
+    font-size: 0.8rem;
+    color: var(--green-grey);
+    margin: 0;
+}
+
+.admin-photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background-color: var(--white);
+    border: 1px dashed var(--sea-blue);
+    border-radius: 24px;
+    padding: 40px 16px;
+    cursor: pointer;
+}
+
+.admin-add-beach-section .admin-photo-upload input {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    background: none;
+}
+
+.admin-photo-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--green-grey);
+}
+
+.admin-add-beach-section button {
+    align-self: center;
+}

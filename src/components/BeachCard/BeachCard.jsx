@@ -5,7 +5,7 @@ import heartEmpty from "../../assets/heartEmpty.svg";
 import { AuthContext } from '../../context/AuthContext.jsx';
 import { useContext } from 'react';
 
-function BeachCard({id, name, province, beachFeatures, rating, isFavorite, onToggleFavorite}) {
+function BeachCard({id, name, province, beachFeatures, rating, isFavorite, onToggleFavorite, showRating = true}) {
     const { isAuth } = useContext(AuthContext);
 
     return (
@@ -17,9 +17,9 @@ function BeachCard({id, name, province, beachFeatures, rating, isFavorite, onTog
                     {beachFeatures.map((beachFeature) => (
                         <p key={beachFeature.id}>{beachFeature.name}</p>))}
                 </div>
-                {rating ? <p className="rating">{rating.toFixed(1)}/5</p> : <p>No reviews yet</p>}
+               {showRating && (rating ? <p className="rating">{rating.toFixed(1)}/5</p> : <p>No reviews yet</p>)}
            </div>
-            {isAuth && <button className="favorite-button" type="button" onClick={() => onToggleFavorite(id)}>
+            {isAuth && onToggleFavorite && <button className="favorite-button" type="button" onClick={() => onToggleFavorite(id)}>
                 <img src={isFavorite ? heartFull : heartEmpty} alt="Favorite icon"/>
             </button>}
         </article>

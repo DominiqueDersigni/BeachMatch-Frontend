@@ -55,3 +55,67 @@
     gap: 16px;
     max-width: 50%;
 }
+
+.favorite-beaches {
+    border-top: 1px solid var(--light-grey);
+    margin-top: 48px;
+    padding-top: 24px;
+}
+
+.edit-profile-section {
+    margin-top: 48px;
+    padding-top: 24px;
+}
+
+.edit-profile-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.edit-profile-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 24px;
+}
+
+.edit-profile-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edit-profile-field label,
+.edit-profile-label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.edit-profile-field input[type="text"],
+.edit-profile-field input[type="number"] {
+    background-color: var(--white);
+    border: 1px solid var(--sea-blue);
+    border-radius: 999px;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.transport-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.edit-profile-field .transport-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--green-grey);
+}
+
+.edit-profile-section button {
+    align-self: center;
+}

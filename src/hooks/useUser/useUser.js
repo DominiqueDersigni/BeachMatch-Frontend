@@ -27,7 +27,7 @@ const useUser  = (username) => {
         void fetchUser();
     }, [username]);
 
-    return { profile, loading, error };
+    return { profile, setProfile, loading, error };
 };
 
 export default useUser;

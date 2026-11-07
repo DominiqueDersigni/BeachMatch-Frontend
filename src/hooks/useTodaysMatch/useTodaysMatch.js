@@ -7,10 +7,14 @@ const useTodaysMatch  = (beaches) => {
     const [match, setMatch] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const {favorites} = useFavorites();
+    const {favorites, loading: favoritesLoading} = useFavorites();
 
     useEffect(() => {
-        if (beaches.length === 0 || favorites.length === 0) {
+        if (beaches.length === 0 || favoritesLoading) {
+            return;
+        }
+        if (favorites.length === 0) {
+            setLoading(false);
             return;
         }
 
@@ -56,7 +60,7 @@ const useTodaysMatch  = (beaches) => {
             }
         }
         fetchTodaysMatch();
-    }, [beaches, favorites]);
+    }, [beaches, favorites, favoritesLoading]);
 
     return { match, loading, error };
 };

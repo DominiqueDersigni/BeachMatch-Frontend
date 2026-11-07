@@ -34,6 +34,7 @@ function TodaysMatchPage() {
                     {match && <h1 className = "hero-title">Today's Match: <span className = "title-highlight">{match.beach.name}</span></h1>}
                     {!isAuth && <p>Log in to find your match. <Link to="/login">Log in</Link></p>}
                     {isAuth && loading && <p>Finding your perfect match...</p>}
+                    {isAuth && !loading && !match && <p>You don't have any favorite beaches yet. <Link to="/beaches">Find your beach</Link> and tap the heart to add it to your favorites.</p>}
                     {error && <p>{error}</p>}
                     {match && <p className ="todaysmatch-subtitle">Best choice today based on live weather and traffic information.</p>}
                 </div>

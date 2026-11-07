@@ -21,7 +21,7 @@ const useBeach  = (id) => {
         void fetchBeach();
     }, [id]);
 
-    return { beach, loading, error };
+    return { beach, setBeach, loading, error };
 };
 
 export default useBeach;

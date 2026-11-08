@@ -75,7 +75,7 @@ function AdminPage() {
         <>
             {isAdmin ? (
                 <>
-                    <h2>Beaches</h2>
+                    <h2>Manage beaches</h2>
                     <div className="beach-list">
                         {beaches.map((beach) => (
                             <div className="admin-beach-item" key={beach.id}>

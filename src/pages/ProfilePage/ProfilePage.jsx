@@ -63,6 +63,7 @@ function ProfilePage() {
                         {profile && <h3>{profile.name}</h3>}
                             <div className="profile-card-grid">
                                 {profile && <p className= "profile-age">Age: {profile.age ? `${profile.age} years old` : "Not filled in yet"}</p>}
+                                {profile && <p className= "profile-address"> Address: {profile.address ? profile.address : "Not filled in yet"}</p>}
                                 {profile && <p className= "profile-city"> Lives in: {profile.city ? profile.city : "Not filled in yet"}</p>}
                                 {profile && <p className= "profile-email">Email: {profile.email}</p>}
                                 {profile && <p className="profile-transport">Mode of transportation: {profile.modesOfTransport && profile.modesOfTransport.length > 0 ? profile.modesOfTransport.map((mode) => mode.toLowerCase().replace('_', ' ')).join(', ') : "Not filled in yet"}</p>}                            </div>

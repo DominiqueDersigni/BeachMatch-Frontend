@@ -1,6 +1,6 @@
 import './BeachDetailPage.css';
 import axios from "axios";
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { Link, useParams} from 'react-router-dom';
 import useBeach from '../../hooks/useBeach/useBeach.js';
 import Button from '../../components/Button/Button.jsx';
@@ -12,11 +12,49 @@ import carIcon from "../../assets/carIcon.svg";
 import sunIcon from "../../assets/sunIcon.svg";
 import beachPlaceholder from "../../assets/beachPlaceholder.svg";
 import {AuthContext} from "../../context/AuthContext.jsx";
+import fetchWeather from "../../helpers/fetchWeather.js";
+import fetchTraffic from "../../helpers/fetchTraffic.js";
 
 function BeachDetailPage() {
     const {id} = useParams();
     const { beach, setBeach, loading, error } = useBeach(id);
     const [photoError, setPhotoError] = useState(false);
+    const [weather, setWeather] = useState(null);
+    const [traffic, setTraffic] = useState(null);
+
+    useEffect(() => {
+        if (!beach) {
+            return;
+        }
+
+        async function fetchConditions() {
+            try {
+                const weatherResult = await fetchWeather(beach.latitude, beach.longitude);
+                setWeather(weatherResult);
+            } catch (e) {
+                console.error(e);
+            }
+
+            try {
+                const trafficResult = await fetchTraffic(beach.latitude, beach.longitude);
+                setTraffic(trafficResult);
+            } catch (e) {
+                console.log("Traffic not available", e);
+            }
+        }
+        fetchConditions();
+    }, [beach]);
+
+    let trafficText = "Traffic information not available";
+    if (traffic !== null) {
+        if (traffic < 0.2) {
+            trafficText = "It's quiet today";
+        } else if (traffic < 0.5) {
+            trafficText = "It's a little bit busy today";
+        } else {
+            trafficText = "It’s very busy today";
+        }
+    }
 
     async function handleDownload() {
         try{
@@ -64,8 +102,8 @@ function BeachDetailPage() {
                 <Button variant="secondary" onClick={handleDownload}>Download picture</Button>
             </div>
             <section className="beach-info">
-                {beach && <InfoCard title="Weather" icon={sunIcon} informationText={"coming soon"} />}
-                {beach && <InfoCard title="Traffic" icon={carIcon} informationText={"coming soon"} />}
+                {beach && <InfoCard title="Weather" icon={sunIcon} informationText={weather ? `Temperature: ${Math.round(weather.temperature)} °C, Wind: ${Math.round(weather.windSpeed)} km/h` : "Loading..."} />}
+                {beach && <InfoCard title="Traffic" icon={carIcon} informationText={trafficText} />}
                 {beach && <InfoCard title="Features" icon={featureIcon} informationText={beach.beachFeatures.map((feature) => feature.name).join(', ')} />}
             </section>
             <section className="beach-reviews">

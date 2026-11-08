@@ -11,7 +11,7 @@ import map from "../../assets/map.svg";
 function BeachesPage() {
     const {beaches, loading, error} = useBeaches();
     const [searchTerm, setSearchTerm] = useState('');
-    const filteredBeaches = beaches.filter((beach) => beach.name.toLowerCase().includes(searchTerm.toLowerCase()) || beach.province.toLowerCase().includes(searchTerm.toLowerCase()));
+    const filteredBeaches = beaches.filter((beach) => beach.name.toLowerCase().includes(searchTerm.toLowerCase()) || beach.province.toLowerCase().includes(searchTerm.toLowerCase()) || beach.beachFeatures.some((feature) => feature.name.toLowerCase().includes(searchTerm.toLowerCase())));
     const {favorites, setFavorites} = useFavorites ();
 
     async function handleToggleFavorite(beachId) {
